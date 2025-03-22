@@ -214,9 +214,9 @@ void setup() {
   // reset button
   pinMode(resetColumn, INPUT_PULLUP);
   pinMode(resetRow, OUTPUT);
-  digitalWrite(row1, LOW);
+  digitalWrite(resetRow, LOW);
   delay(10);
-  // wait for start command on newline button
+  // wait for start command on run/stop button
   Serial.println("waiting for start");
   while(digitalRead(resetColumn)){
     delay(100);
